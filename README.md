@@ -1,11 +1,11 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=28&pause=1000&color=C8A96E&center=true&vCenter=true&width=600&lines=☕+Pat-Pat+Cafe;Order+%26+POS+System" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=30&pause=1000&color=C8A96E&center=true&vCenter=true&width=500&lines=☕+Pat-Pat+Cafe;Order+%26+POS+System" alt="Pat-Pat Cafe" />
 
 <br/>
 
-**Sistem Point of Sale & manajemen pesanan berbasis web untuk kafe modern.**  
-Mendukung alur *Dine-in via QR Code* dan *Takeaway* — dari meja ke dapur, real-time.
+> **Sistem Point of Sale & Order Management berbasis web.**
+> Mendukung *Dine-in via QR Code* dan *Takeaway* — dari meja ke dapur, real-time.
 
 <br/>
 
@@ -21,31 +21,22 @@ Mendukung alur *Dine-in via QR Code* dan *Takeaway* — dari meja ke dapur, real
 
 ## 📖 Tentang Proyek
 
-**Pat-Pat Cafe Order System** adalah aplikasi POS (*Point of Sale*) komersial yang dirancang untuk memodernisasi alur operasional kafe — mulai dari pemesanan pelanggan, manajemen kasir, hingga pelaporan keuangan harian. Dibangun dengan arsitektur PHP native yang ringan namun dirancang dengan prinsip keamanan dan akuntabilitas operasional.
+**Pat-Pat Cafe Order System** adalah aplikasi POS (*Point of Sale*) komersial yang dirancang untuk memodernisasi alur operasional kafe — mulai dari pemesanan pelanggan, manajemen kasir, hingga pelaporan keuangan harian. Dibangun dengan arsitektur PHP native yang ringan namun menerapkan prinsip keamanan dan akuntabilitas operasional yang serius.
 
-> Proyek ini dikembangkan sebagai *Final Project* mata kuliah Pemrograman Web dan sekaligus sebagai portofolio rekayasa perangkat lunak profesional.
+> Dikembangkan sebagai *Final Project* mata kuliah **Pemrograman Web** dan sekaligus portofolio rekayasa perangkat lunak profesional.
 
 ---
 
-## ✨ Fitur Teknis Unggulan
+## ✨ Engineering Highlights
 
-### 🛒 Dynamic Cart & Transaksi Real-Time
-Session-based cart di memori PHP dengan kalkulasi **PPN 11%** dan **Service Charge** otomatis. Dilengkapi timer kadaluarsa untuk pelepasan stok jika transaksi tidak diselesaikan.
-
-### 🧾 Nota Digital via FPDF
-Menghasilkan bukti nota dalam format *thermal receipt 80mm* langsung dari server menggunakan library FPDF dan *Output Buffering* — menghindari distorsi cetak dari browser rendering.
-
-### 🔐 Keamanan Kriptografi
-Seluruh kredensial pegawai diproteksi dengan algoritma **Bcrypt** (enkripsi satu arah), memastikan tidak ada sandi yang tersimpan dalam bentuk plaintext di database.
-
-### 📊 Dashboard Analitik & Ekspor Data
-Dashboard rekap keuangan dengan *Data Retention Policy* (3 tahun) untuk optimalisasi query, plus kapabilitas ekspor ke **CSV** untuk audit di Microsoft Excel.
-
-### 📋 Audit Trail Kasir
-Session tagging ketat pada setiap transaksi kasir untuk menjaga jejak audit operasional yang akuntabel.
-
-### 📱 Dynamic QRIS Render
-QR Code di-generate dan di-render langsung di RAM — tidak menyimpan file sementara ke disk untuk mencegah akumulasi file sampah di hosting.
+| | Fitur | Deskripsi |
+|---|---|---|
+| 🛒 | **Dynamic Cart & Transaksi Real-Time** | Session-based cart di memori PHP dengan kalkulasi PPN 11% & service charge otomatis. Dilengkapi timer kadaluarsa untuk pelepasan stok. |
+| 🧾 | **Nota Digital via FPDF** | Thermal receipt 80mm di-generate langsung dari server menggunakan FPDF + Output Buffering — bebas distorsi cetak browser. |
+| 🔐 | **Keamanan Bcrypt** | Seluruh kredensial pegawai dienkripsi one-way dengan Bcrypt — tidak ada plaintext tersimpan di database. |
+| 📊 | **Dashboard Analitik & CSV Export** | Data Retention Policy 3 tahun untuk optimalisasi query, plus ekspor data mentah ke CSV untuk audit di Excel. |
+| 🧾 | **Audit Trail Kasir** | Session tagging ketat pada setiap transaksi kasir untuk jejak audit operasional yang akuntabel. |
+| 📱 | **Dynamic QRIS Render** | QR Code di-generate dan di-render langsung di RAM — tidak ada file temp yang menumpuk di hosting. |
 
 ---
 
@@ -53,9 +44,9 @@ QR Code di-generate dan di-render langsung di RAM — tidak menyimpan file semen
 
 | Halaman Katalog | Dashboard Keuangan |
 |:---:|:---:|
-| ![Katalog](link_gambar_katalog_di_sini) | ![Keuangan](link_gambar_dashboard_di_sini) |
+| ![Katalog](assets/screenshots/katalog.png) | ![Keuangan](assets/screenshots/dashboard.png) |
 | **Nota Digital PDF** | **Panel Admin** |
-| ![Nota](link_gambar_nota_di_sini) | ![Admin](link_gambar_admin_di_sini) |
+| ![Nota](assets/screenshots/nota.png) | ![Admin](assets/screenshots/admin.png) |
 
 ---
 
@@ -75,7 +66,7 @@ cd PWEB-Final-Project
 
 **2. Pindahkan ke direktori server**
 
-Salin folder proyek ke `htdocs` (XAMPP) atau direktori root lokal yang kamu gunakan.
+Salin folder proyek ke `htdocs/` (XAMPP) atau direktori root server lokal yang kamu gunakan.
 
 **3. Buat & import database**
 
@@ -95,7 +86,7 @@ $dbname = "patpat_cafe";
 **5. Akses aplikasi**
 
 | Antarmuka | URL |
-|-----------|-----|
+|---|---|
 | 🧑 Pelanggan (Katalog & Pemesanan) | `http://localhost/PWEB-Final-Project/` |
 | 🔧 Admin & Kasir (Back-Office) | `http://localhost/PWEB-Final-Project/admin/` |
 
@@ -105,16 +96,16 @@ $dbname = "patpat_cafe";
 
 ```
 PWEB-Final-Project/
-├── admin/          # Panel back-office (kasir & manajemen)
-├── assets/         # CSS, JS, gambar
-├── config/         # Konfigurasi database
-├── includes/       # Komponen reusable (header, footer, dll)
-├── libs/           # Library pihak ketiga (FPDF, QR generator)
-├── uploads/        # Media yang diunggah
-├── index.php       # Halaman utama pelanggan
-├── katalog.php     # Halaman menu & pemesanan
-├── checkout.php    # Keranjang & konfirmasi pesanan
-└── pembayaran.php  # Proses pembayaran & QRIS
+├── admin/           # Panel back-office (kasir & manajemen)
+├── assets/          # CSS, JS, gambar
+├── config/          # Konfigurasi database
+├── includes/        # Komponen reusable (header, footer, dll)
+├── libs/            # Library pihak ketiga (FPDF, QR generator)
+├── uploads/         # Media yang diunggah
+├── index.php        # Halaman utama pelanggan
+├── katalog.php      # Halaman menu & pemesanan
+├── checkout.php     # Keranjang & konfirmasi pesanan
+└── pembayaran.php   # Proses pembayaran & QRIS
 ```
 
 ---
@@ -123,24 +114,27 @@ PWEB-Final-Project/
 
 <table>
   <tr>
-    <td align="center">
+    <td align="center" width="50%">
+      <img src="https://github.com/Apasijannn.png" width="72" style="border-radius:50%"/><br/>
       <b>Muhammad Dayyan Ghazanfar Latief</b><br/>
       <a href="https://github.com/Apasijannn">@Apasijannn</a>
     </td>
-    <td align="center">
+    <td align="center" width="50%">
+      <img src="https://github.com/ghost.png" width="72" style="border-radius:50%"/><br/>
       <b>Sitti Aminah</b><br/>
+      <sub>Kolaborator</sub>
     </td>
   </tr>
 </table>
 
 ---
 
-## 📄 Lisensi
+## 🌐 Live Demo
 
-Proyek ini dikembangkan sebagai bagian dari penyelesaian tugas akademik **Pemrograman Web** dan optimalisasi portofolio profesional rekayasa perangkat lunak.
+> 🔗 [patpat-cafe.page.gd](http://patpat-cafe.page.gd/index.php)
 
 ---
 
 <div align="center">
-  <sub>Made with ☕ & PHP · Pat-Pat Cafe © 2025</sub>
+  <sub>Made with ☕ & PHP &nbsp;·&nbsp; Pat-Pat Cafe © 2025</sub>
 </div>
