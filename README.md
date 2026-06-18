@@ -1,81 +1,126 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=30&pause=1000&color=C8A96E&center=true&vCenter=true&width=500&lines=☕+Pat-Pat+Cafe;Order+%26+POS+System" alt="Pat-Pat Cafe" />
+```
+██████╗  █████╗ ████████╗      ██████╗  █████╗ ████████╗
+██╔══██╗██╔══██╗╚══██╔══╝      ██╔══██╗██╔══██╗╚══██╔══╝
+██████╔╝███████║   ██║   █████╗██████╔╝███████║   ██║   
+██╔═══╝ ██╔══██║   ██║   ╚════╝██╔═══╝ ██╔══██║   ██║   
+██║     ██║  ██║   ██║         ██║     ██║  ██║   ██║   
+╚═╝     ╚═╝  ╚═╝   ╚═╝         ╚═╝     ╚═╝  ╚═╝   ╚═╝   
+```
+
+### ☕ Order & Point of Sale System
+
+*Dari meja ke dapur — tanpa kertas, tanpa tunda.*
 
 <br/>
 
-> **Sistem Point of Sale & Order Management berbasis web.**
-> Mendukung *Dine-in via QR Code* dan *Takeaway* — dari meja ke dapur, real-time.
-
-<br/>
-
-![PHP](https://img.shields.io/badge/PHP-8.x-777BB4?style=flat-square&logo=php&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-8.x-005C84?style=flat-square&logo=mysql&logoColor=white)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-5-7952B3?style=flat-square&logo=bootstrap&logoColor=white)
-![FPDF](https://img.shields.io/badge/FPDF-Receipt_Generator-C8A96E?style=flat-square)
-![License](https://img.shields.io/badge/License-Academic-lightgrey?style=flat-square)
+[![PHP](https://img.shields.io/badge/PHP-8.x-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net/)
+[![MySQL](https://img.shields.io/badge/MySQL-8.x-005C84?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-5-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
+[![FPDF](https://img.shields.io/badge/FPDF-Receipt-C8A96E?style=for-the-badge)](http://www.fpdf.org/)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-28a745?style=for-the-badge&logo=vercel&logoColor=white)](http://patpat-cafe.page.gd/index.php)
 
 </div>
 
 ---
 
-## 📖 Tentang Proyek
+## Tentang Proyek
 
-**Pat-Pat Cafe Order System** adalah aplikasi POS (*Point of Sale*) komersial yang dirancang untuk memodernisasi alur operasional kafe — mulai dari pemesanan pelanggan, manajemen kasir, hingga pelaporan keuangan harian. Dibangun dengan arsitektur PHP native yang ringan namun menerapkan prinsip keamanan dan akuntabilitas operasional yang serius.
+**Pat-Pat Cafe** adalah sistem POS (*Point of Sale*) berbasis web yang dirancang untuk memodernisasi alur kerja kafe secara menyeluruh — dari pelanggan scan QR di meja, hingga nota PDF tercetak di kasir. Dibangun di atas PHP native tanpa framework berat, dengan arsitektur yang mengutamakan kecepatan dan akuntabilitas operasional.
 
-> Dikembangkan sebagai *Final Project* mata kuliah **Pemrograman Web** dan sekaligus portofolio rekayasa perangkat lunak profesional.
+> Dikembangkan sebagai *Final Project* mata kuliah **Pemrograman Web** — dan dirancang dengan standar produk nyata.
 
----
+<br/>
 
-## ✨ Engineering Highlights
+## Engineering Highlights
 
-| | Fitur | Deskripsi |
-|---|---|---|
-| 🛒 | **Dynamic Cart & Transaksi Real-Time** | Session-based cart di memori PHP dengan kalkulasi PPN 11% & service charge otomatis. Dilengkapi timer kadaluarsa untuk pelepasan stok. |
-| 🧾 | **Nota Digital via FPDF** | Thermal receipt 80mm di-generate langsung dari server menggunakan FPDF + Output Buffering — bebas distorsi cetak browser. |
-| 🔐 | **Keamanan Bcrypt** | Seluruh kredensial pegawai dienkripsi one-way dengan Bcrypt — tidak ada plaintext tersimpan di database. |
-| 📊 | **Dashboard Analitik & CSV Export** | Data Retention Policy 3 tahun untuk optimalisasi query, plus ekspor data mentah ke CSV untuk audit di Excel. |
-| 🧾 | **Audit Trail Kasir** | Session tagging ketat pada setiap transaksi kasir untuk jejak audit operasional yang akuntabel. |
-| 📱 | **Dynamic QRIS Render** | QR Code di-generate dan di-render langsung di RAM — tidak ada file temp yang menumpuk di hosting. |
+<table>
+  <tr>
+    <td>🛒</td>
+    <td><strong>Dynamic Cart & Transaksi Real-Time</strong></td>
+    <td>Session-based cart di PHP dengan kalkulasi PPN 11% + service charge otomatis. Timer kadaluarsa mencegah stok tertahan dari pesanan yang dibatalkan.</td>
+  </tr>
+  <tr>
+    <td>🧾</td>
+    <td><strong>Nota PDF via FPDF</strong></td>
+    <td>Thermal receipt 80mm di-generate langsung dari server menggunakan FPDF + Output Buffering. Bebas distorsi cetak browser, siap kirim ke printer fisik.</td>
+  </tr>
+  <tr>
+    <td>🔐</td>
+    <td><strong>Bcrypt Auth</strong></td>
+    <td>Semua kredensial pegawai dienkripsi one-way dengan Bcrypt. Tidak ada plaintext tersimpan — bahkan admin tidak bisa membaca password orang lain.</td>
+  </tr>
+  <tr>
+    <td>📊</td>
+    <td><strong>Dashboard Analitik + CSV Export</strong></td>
+    <td>Data Retention Policy 3 tahun untuk menjaga query tetap ringan. Export data mentah ke CSV untuk audit di Excel dengan sekali klik.</td>
+  </tr>
+  <tr>
+    <td>🔍</td>
+    <td><strong>Audit Trail Kasir</strong></td>
+    <td>Setiap transaksi di-tag dengan session ID kasir. Rekam jejak operasional penuh — siapa kasir, kapan, berapa — tersimpan otomatis.</td>
+  </tr>
+  <tr>
+    <td>📱</td>
+    <td><strong>Dynamic QRIS In-Memory</strong></td>
+    <td>QR Code di-generate dan di-render langsung di RAM server. Tidak ada file temp yang menumpuk di disk hosting.</td>
+  </tr>
+</table>
 
----
+<br/>
 
-## 📸 Screenshots
+## Screenshots
 
-| Halaman Katalog | Dashboard Keuangan |
+| Katalog Menu | Dashboard Keuangan |
 |:---:|:---:|
-| ![Katalog](assets/screenshots/katalog.png) | ![Keuangan](assets/screenshots/dashboard.png) |
+| ![Katalog](assets/screenshots/katalog.png) | ![Dashboard](assets/screenshots/dashboard.png) |
 | **Nota Digital PDF** | **Panel Admin** |
 | ![Nota](assets/screenshots/nota.png) | ![Admin](assets/screenshots/admin.png) |
 
----
+<br/>
 
-## 🚀 Instalasi Lokal
+## Struktur Direktori
 
-### Prasyarat
-- XAMPP / Laragon (PHP 8.x + MySQL)
-- Browser modern
+```
+PWEB-Final-Project/
+│
+├── 📁 admin/           → Panel back-office (kasir & manajemen)
+├── 📁 assets/          → CSS, JS, gambar statis
+├── 📁 config/          → Konfigurasi koneksi database
+├── 📁 includes/        → Komponen reusable (header, footer, dll)
+├── 📁 libs/            → Library pihak ketiga (FPDF, QR generator)
+├── 📁 uploads/         → Media yang diunggah
+│
+├── 📄 index.php        → Landing page pelanggan
+├── 📄 katalog.php      → Menu & pemesanan
+├── 📄 checkout.php     → Keranjang & konfirmasi
+└── 📄 pembayaran.php   → Proses pembayaran & QRIS
+```
 
-### Langkah-langkah
+<br/>
 
-**1. Clone repositori**
+## Instalasi Lokal
+
+**Prasyarat:** XAMPP / Laragon (PHP 8.x + MySQL) + browser modern.
+
+**1 — Clone**
 ```bash
 git clone https://github.com/Apasijannn/PWEB-Final-Project.git
 cd PWEB-Final-Project
 ```
 
-**2. Pindahkan ke direktori server**
+**2 — Pindah ke server lokal**
 
-Salin folder proyek ke `htdocs/` (XAMPP) atau direktori root server lokal yang kamu gunakan.
+Salin folder ke `htdocs/` (XAMPP) atau root direktori server lokal kamu.
 
-**3. Buat & import database**
+**3 — Buat & import database**
 
-Buka `http://localhost/phpmyadmin`, buat database baru bernama `patpat_cafe`, lalu import file `patpat_cafe.sql` dari root folder proyek.
+Buka `http://localhost/phpmyadmin`, buat database `patpat_cafe`, lalu import `patpat_cafe.sql` dari root proyek.
 
-**4. Konfigurasi koneksi**
+**4 — Konfigurasi koneksi**
 
-Buka `config/koneksi.php` dan sesuaikan kredensial:
-
+Edit `config/koneksi.php`:
 ```php
 $host   = "localhost";
 $user   = "root";
@@ -83,58 +128,40 @@ $pass   = "";
 $dbname = "patpat_cafe";
 ```
 
-**5. Akses aplikasi**
+**5 — Akses aplikasi**
 
-| Antarmuka | URL |
+| Role | URL |
 |---|---|
-| 🧑 Pelanggan (Katalog & Pemesanan) | `http://localhost/PWEB-Final-Project/` |
-| 🔧 Admin & Kasir (Back-Office) | `http://localhost/PWEB-Final-Project/admin/` |
+| 🧑 Pelanggan | `http://localhost/PWEB-Final-Project/` |
+| 🔧 Admin & Kasir | `http://localhost/PWEB-Final-Project/admin/` |
 
----
+<br/>
 
-## 🗂️ Struktur Direktori
-
-```
-PWEB-Final-Project/
-├── admin/           # Panel back-office (kasir & manajemen)
-├── assets/          # CSS, JS, gambar
-├── config/          # Konfigurasi database
-├── includes/        # Komponen reusable (header, footer, dll)
-├── libs/            # Library pihak ketiga (FPDF, QR generator)
-├── uploads/         # Media yang diunggah
-├── index.php        # Halaman utama pelanggan
-├── katalog.php      # Halaman menu & pemesanan
-├── checkout.php     # Keranjang & konfirmasi pesanan
-└── pembayaran.php   # Proses pembayaran & QRIS
-```
-
----
-
-## 👥 Tim Pengembang
+## Tim Pengembang
 
 <table>
   <tr>
     <td align="center" width="50%">
-      <img src="https://github.com/Apasijannn.png" width="72" style="border-radius:50%"/><br/>
+      <img src="https://github.com/Apasijannn.png" width="80" style="border-radius:50%"/><br/><br/>
       <b>Muhammad Dayyan Ghazanfar Latief</b><br/>
       <a href="https://github.com/Apasijannn">@Apasijannn</a>
     </td>
     <td align="center" width="50%">
-      <img src="https://github.com/ghost.png" width="72" style="border-radius:50%"/><br/>
+      <img src="https://github.com/ghost.png" width="80" style="border-radius:50%"/><br/><br/>
       <b>Sitti Aminah</b><br/>
       <sub>Kolaborator</sub>
     </td>
   </tr>
 </table>
 
----
-
-## 🌐 Live Demo
-
-> 🔗 [patpat-cafe.page.gd](http://patpat-cafe.page.gd/index.php)
+<br/>
 
 ---
 
 <div align="center">
-  <sub>Made with ☕ & PHP &nbsp;·&nbsp; Pat-Pat Cafe © 2025</sub>
+
+**🔗 [patpat-cafe.page.gd](http://patpat-cafe.page.gd/index.php)**
+
+<sub>Pat-Pat Cafe © 2025 &nbsp;·&nbsp; Made with ☕ & PHP native &nbsp;·&nbsp; Academic License</sub>
+
 </div>
