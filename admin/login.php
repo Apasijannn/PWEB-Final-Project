@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <?php if (isset($_GET['msg'])): ?>
                         <?php if ($_GET['msg'] === 'idle'): ?>
                             <div class="alert alert-warning text-center fw-bold shadow-sm rounded-4 mb-4">
-                                <i class="fas fa-user-clock me-2"></i>Sesi berakhir karena tidak ada aktivitas selama 5 menit.
+                                <i class="fas fa-user-clock me-2"></i>Sesi berakhir karena tidak ada aktivitas selama 15 menit.
                             </div>
                         <?php elseif ($_GET['msg'] === 'expired'): ?>
                             <div class="alert alert-info text-center fw-bold shadow-sm rounded-4 mb-4">
